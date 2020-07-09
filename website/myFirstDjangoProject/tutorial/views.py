@@ -1,7 +1,7 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the tutorial index function calling.")
-def printname(request):
-    return HttpResponse("<h1>Hi sujeet</h1>")
+    for x in range(3):
+        return render(request, 'home.html', {'name': x})
