@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <title>name page</title>
 </head>
-<body>
-<form action="name">
-    {% extends 'base.html' %}
+<body style="text-align: center">
+{% extends 'base.html' %}
 
     {% block content %}
-    <h2 padding-bottom="0">enter your name </h2>
+<form action="name" method='post' >
+    {% csrf_token %}
+
+    <h2>enter your name </h2>
     <input type ="text" name='your_name'> </h2>
     <br>
     <input type="submit">

@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <title> First page</title>
 </head>
-<body>
+<body style="text-align: center">
 <!--this is the part of jinja content from the base class -->
 {% extends 'base.html' %}
 
 {% block content %}
 <h1>Hello <em>{{name}}</em> </h1>
 
-
+<hr>
 <!--creation of form to add two number-->
 
-<form action="add">
+<form action="add" method='post'>
+
+    {% csrf_token %}
+
     <label >First number:</label><br>
     <input type="text" id="fname" name='num1'><br>
     <label >Last number:</label><br>
