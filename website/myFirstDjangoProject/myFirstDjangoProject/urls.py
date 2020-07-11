@@ -17,6 +17,9 @@ from django.contrib import admin
 from django.urls import path,include
 
 urlpatterns = [
+
+    # adding the path of tutorial
     path('', include('tutorial.urls')),
+
     path('admin/', admin.site.urls),
 ]
